@@ -1,0 +1,201 @@
+
+/* ===== 全站基本設定 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", Arial, sans-serif;
+    background-color: #FAFAF5;
+    color: #34483F;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ===== 導覽列 ===== */
+header {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #548B70;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 15px;
+    color: #42594D;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #80A98B;
+}
+
+/* ===== 首頁主視覺 ===== */
+.hero {
+    min-height: 480px;
+    background: linear-gradient(
+        90deg,
+        rgba(40,75,58,0.75),
+        rgba(40,75,58,0.15)
+    ),
+    url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600")
+    center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 28px;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #85A98B;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #547C60;
+}
+
+/* ===== 主要區塊 ===== */
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    color: #547C60;
+    margin-bottom: 35px;
+}
+
+/* ===== 服務卡片 ===== */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    padding: 18px 20px 5px;
+    color: #547C60;
+}
+
+.service-card p {
+    padding: 0 20px 20px;
+    color: #777;
+}
+
+/* ===== 頁尾 ===== */
+footer {
+    background-color: #547C60;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* ===== 手機版 RWD ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 380px;
+        padding: 40px 7%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+}
