@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>醫療照護｜寵物守護</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .medical-title {
+            text-align: center;
+            padding: 50px 15px 25px;
+            color: #547C60;
+        }
+
+        .medical-title h1 {
+            font-size: 34px;
+        }
+
+        .medical-title p {
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .medical-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .medical-box {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,.05);
+        }
+
+        .medical-box h2 {
+            color: #547C60;
+            margin-bottom: 20px;
+        }
+
+        .medical-box select,
+        .medical-box input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        .disease-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .disease-item {
+            background: #F1F6EF;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .disease-item h3 {
+            color: #547C60;
+            margin-bottom: 8px;
+        }
+
+        .hospital-button {
+            display: inline-block;
+            background: #6E9878;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        @media(max-width:768px) {
+            .disease-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">🐾 寵物守護</a>
+    <nav>
+        <a href="index.html">首頁</a>
+        <a href="medical.html">醫療照護</a>
+        <a href="adoption.html">領養資訊</a>
+        <a href="knowledge.html">寵物知識</a>
+        <a href="products.html">寵物用品</a>
+        <a href="about.html">關於我們</a>
+        <a href="contact.html">聯絡我們</a>
+    </nav>
+</header>
+
+<div class="medical-title">
+    <h1>寵物醫療照護</h1>
+    <p>了解寵物健康，提供毛孩更完善的照顧</p>
+</div>
+
+<div class="medical-container">
+
+    <div class="medical-box">
+        <h2>疾病資訊查詢</h2>
+
+        <label>選擇寵物種類</label>
+        <select id="petType" onchange="showDiseases()">
+            <option value="">請選擇</option>
+            <option value="cat">貓咪</option>
+            <option value="dog">狗狗</option>
+        </select>
+
+        <div id="diseaseResult" class="disease-list">
+            <p>請選擇寵物種類以查看疾病資訊。</p>
+        </div>
+    </div>
+
+    <div class="medical-box">
+        <h2>動物醫院查詢</h2>
+
+        <label>選擇所在縣市</label>
+        <select id="city">
+            <option value="">請選擇縣市</option>
+        </select>
+
+        <a id="hospitalSearch"
+           class="hospital-button"
+           href="https://www.google.com/maps/search/動物醫院/"
+           target="_blank"
+           rel="noopener noreferrer">
+           搜尋附近動物醫院
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p>寵物守護 Pet Guardian</p>
+    <p>用心照顧每一個毛孩，讓愛與陪伴不缺席。</p>
+</footer>
+
+<script>
+const diseases = {
+    cat: [
+        ["貓瘟", "由病毒引起，可能出現發燒、食慾下降及腸胃症狀。"],
+        ["貓愛滋", "影響免疫系統，需要長期健康管理。"],
+        ["貓白血病", "可能影響免疫功能及造血系統。"],
+        ["慢性腎臟病", "常見於中老年貓，需要定期檢查。"],
+        ["泌尿道疾病", "可能出現頻繁排尿或排尿困難。"],
+        ["口炎", "可能造成口腔疼痛及進食困難。"],
+        ["糖尿病", "可能出現飲水量及排尿量增加。"],
+        ["心肌病", "可能影響心臟功能。"],
+        ["耳疥蟲", "常見症狀包括搔耳及耳垢增加。"],
+        ["皮膚黴菌", "可能造成局部脫毛及皮膚病灶。"]
+    ],
+    dog: [
+        ["犬小病毒", "可能造成嚴重腸胃道症狀。"],
+        ["犬瘟熱", "可能影響呼吸道、消化道及神經系統。"],
+        ["心絲蟲", "由蚊子傳播，可能影響心肺功能。"],
+        ["髖關節發育不良", "可能造成關節不適及行動問題。"],
+        ["皮膚過敏", "可能出現搔癢及皮膚發炎。"],
+        ["外耳炎", "可能出現搔耳及耳朵異味。"],
+        ["白內障", "可能影響視力。"],
+        ["胰臟炎", "可能出現嘔吐及腹部不適。"],
+        ["牙周病", "可能造成牙齦發炎及口臭。"],
+        ["庫欣氏症", "可能造成飲水及排尿增加。"]
+    ]
+};
+
+function showDiseases() {
+    const type = document.getElementById("petType").value;
+    const result = document.getElementById("diseaseResult");
+
+    result.innerHTML = "";
+
+    if (!type) {
+        result.innerHTML = "<p>請選擇寵物種類。</p>";
+        return;
+    }
+
+    diseases[type].forEach(item => {
+        result.innerHTML += `
+            <div class="disease-item">
+                <h3>${item[0]}</h3>
+                <p>${item[1]}</p>
+            </div>
+        `;
+    });
+}
+
+const cities = [
+    "臺北市","新北市","桃園市","臺中市","臺南市",
+    "高雄市","基隆市","新竹市","嘉義市",
+    "新竹縣","苗栗縣","彰化縣","南投縣","雲林縣",
+    "嘉義縣","屏東縣","宜蘭縣","花蓮縣","臺東縣",
+    "澎湖縣","金門縣","連江縣"
+];
+
+const citySelect = document.getElementById("city");
+
+cities.forEach(city => {
+    citySelect.innerHTML += `<option value="${city}">${city}</option>`;
+});
+
+citySelect.addEventListener("change", function() {
+    const city = this.value;
+    const button = document.getElementById("hospitalSearch");
+
+    button.href = city
+        ? "https://www.google.com/maps/search/" +
+          encodeURIComponent(city + " 動物醫院")
+        : "https://www.google.com/maps/search/動物醫院/";
+});
+</script>
+
+</body>
+</html>
