@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寵物知識｜寵物守護</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.knowledge-banner {
+    background: linear-gradient(rgba(40,70,50,.55),rgba(40,70,50,.55)),
+    url("https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1600")
+    center/cover;
+    min-height:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+.knowledge-banner h1 {
+    font-size:40px;
+}
+
+.knowledge-banner p {
+    margin-top:12px;
+    font-size:17px;
+}
+
+.knowledge-container {
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.knowledge-container h2 {
+    text-align:center;
+    color:#547C60;
+    margin-bottom:30px;
+}
+
+.knowledge-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.knowledge-card {
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.knowledge-card:hover {
+    transform:translateY(-5px);
+}
+
+.knowledge-card img {
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.knowledge-card div {
+    padding:20px;
+}
+
+.knowledge-card h3 {
+    color:#547C60;
+    margin-bottom:10px;
+}
+
+.knowledge-card p {
+    color:#666;
+    font-size:14px;
+}
+
+.knowledge-info {
+    background:white;
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:18px;
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+}
+
+.knowledge-info h3 {
+    color:#547C60;
+    margin-bottom:10px;
+}
+
+.knowledge-info p {
+    color:#666;
+}
+
+.knowledge-info a {
+    display:inline-block;
+    color:#547C60;
+    margin-top:12px;
+    text-decoration:underline;
+}
+
+.notice {
+    background:#F0F5EF;
+    padding:22px;
+    border-radius:12px;
+    margin-top:25px;
+    color:#547C60;
+}
+
+@media(max-width:768px) {
+    .knowledge-grid {
+        grid-template-columns:1fr;
+    }
+
+    .knowledge-banner h1 {
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 導覽列 -->
+<header>
+<a href="index.html" class="logo">🐾 寵物守護</a>
+
+<nav>
+<a href="index.html">首頁</a>
+<a href="medical.html">醫療照護</a>
+<a href="adoption.html">領養資訊</a>
+<a href="knowledge.html">寵物知識</a>
+<a href="products.html">寵物用品</a>
+<a href="about.html">關於我們</a>
+<a href="contact.html">聯絡我們</a>
+</nav>
+</header>
+
+<!-- Banner -->
+<div class="knowledge-banner">
+<div>
+<h1>寵物知識 Pet Knowledge</h1>
+<p>了解正確的飼養觀念，給毛孩更好的生活。</p>
+</div>
+</div>
+
+<!-- 日常照護 -->
+<section class="knowledge-container">
+<h2>日常照護指南</h2>
+
+<div class="knowledge-grid">
+
+<div class="knowledge-card">
+<img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700" alt="寵物飲食">
+<div>
+<h3>飲食與營養</h3>
+<p>依照寵物的年齡、體型及健康狀況，選擇適合的完整均衡飼料，並隨時提供乾淨飲水。</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=700" alt="貓咪生活">
+<div>
+<h3>環境與生活</h3>
+<p>提供安全舒適的生活空間，準備適當的休息區域、玩具及活動空間。</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700" alt="狗狗運動">
+<div>
+<h3>運動與陪伴</h3>
+<p>依照寵物的年齡與體能安排適當活動，並給予足夠的互動及陪伴。</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=700" alt="寵物清潔">
+<div>
+<h3>清潔與美容</h3>
+<p>定期梳理毛髮、修剪指甲及維持生活環境清潔，並留意皮膚與耳朵狀況。</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<img src="https://images.unsplash.com/photo-1601758123927-196d1f7c5f1d?w=700" alt="寵物健康">
+<div>
+<h3>健康與預防</h3>
+<p>定期安排健康檢查，依照獸醫建議進行疫苗接種及寄生蟲預防。</p>
+</div>
+</div>
+
+<div class="knowledge-card">
+<img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=700" alt="寵物互動">
+<div>
+<h3>行為與訓練</h3>
+<p>了解寵物的行為與需求，透過正向鼓勵建立良好的生活習慣。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 貓咪知識 -->
+<section class="knowledge-container">
+<h2>貓咪飼養須知</h2>
+
+<div class="knowledge-info">
+<h3>01｜飲食管理</h3>
+<p>貓咪是肉食性動物，應選擇符合年齡及營養需求的貓糧，並提供充足的乾淨飲水。</p>
+</div>
+
+<div class="knowledge-info">
+<h3>02｜貓砂與環境</h3>
+<p>準備適合的貓砂盆，定期清理貓砂，並提供安全的活動及休息空間。</p>
+</div>
+
+<div class="knowledge-info">
+<h3>03｜毛髮與指甲</h3>
+<p>定期梳理毛髮，留意指甲長度及皮膚狀況，依照需要進行清潔照護。</p>
+</div>
+
+<div class="knowledge-info">
+<h3>04｜日常互動</h3>
+<p>透過玩具及互動遊戲增加活動量，也要尊重貓咪獨處與休息的需求。</p>
+</div>
+</section>
+
+<!-- 狗狗知識 -->
+<section class="knowledge-container">
+<h2>狗狗飼養須知</h2>
+
+<div class="knowledge-info">
+<h3>01｜飲食管理</h3>
+<p>依照狗狗的年齡、體型及活動量選擇適合的飼料，避免隨意餵食不適合的食物。</p>
+</div>
+
+<div class="knowledge-info">
+<h3>02｜散步與運動</h3>
+<p>依照狗狗的身體狀況安排散步及活動，外出時使用牽繩並注意周遭環境。</p>
+</div>
+
+<div class="knowledge-info">
+<h3>03｜清潔與美容</h3>
+<p>定期梳理毛髮、清潔耳朵及照顧牙齒，維持良好的衛生習慣。</p>
+</div>
+
+<div class="knowledge-info">
+<h3>04｜社會化與訓練</h3>
+<p>透過適當的引導與正向獎勵，幫助狗狗適應不同環境及建立良好習慣。</p>
+</div>
+</section>
+
+<!-- 官方參考資料 -->
+<section class="knowledge-container">
+<h2>更多寵物照護知識</h2>
+
+<div class="knowledge-info">
+<h3>農業部動物保護資訊網</h3>
+<p>提供犬、貓及其他寵物的飼養與照顧指南。</p>
+<a href="https://animal.moa.gov.tw/Frontend/Know/PageTabList?TabID=31B05CB460072264BF30B852D5842398"
+target="_blank" rel="noopener noreferrer">查看官方照護指南 →</a>
+</div>
+
+<div class="knowledge-info">
+<h3>美國防止虐待動物協會 ASPCA</h3>
+<p>提供寵物日常照護、飲食及健康相關知識。</p>
+<a href="https://www.aspca.org/pet-care" target="_blank" rel="noopener noreferrer">查看寵物照護資訊 →</a>
+</div>
+
+<div class="notice">
+<strong>溫馨提醒</strong>
+<p>本頁內容提供一般飼養知識，不能取代專業獸醫診斷。如有健康疑慮，請諮詢合格獸醫師。</p>
+</div>
+
+</section>
+
+<footer>
+<p>寵物守護 Pet Guardian</p>
+<p>用心照顧每一個毛孩，讓愛與陪伴不缺席。</p>
+<p>© 2026 Pet Guardian. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
