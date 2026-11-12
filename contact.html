@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聯絡我們｜寵物守護</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.contact-banner {
+    background: linear-gradient(rgba(40,70,50,.55),rgba(40,70,50,.55)),
+    url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600")
+    center/cover;
+    min-height:260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+.contact-banner h1 {
+    font-size:38px;
+}
+
+.contact-container {
+    max-width:900px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.contact-box {
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.contact-box h2 {
+    text-align:center;
+    color:#547C60;
+    margin-bottom:12px;
+}
+
+.contact-intro {
+    text-align:center;
+    color:#777;
+    margin-bottom:30px;
+}
+
+.contact-form label {
+    display:block;
+    margin:16px 0 8px;
+    color:#444;
+    font-weight:bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    box-sizing:border-box;
+}
+
+.contact-form textarea {
+    min-height:150px;
+    resize:vertical;
+}
+
+.contact-form button {
+    width:100%;
+    margin-top:22px;
+    padding:14px;
+    border:0;
+    border-radius:8px;
+    background:#547C60;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.contact-form button:hover {
+    background:#3f6249;
+}
+
+.contact-note {
+    background:#F0F5EF;
+    padding:18px;
+    border-radius:10px;
+    margin-top:25px;
+    line-height:1.8;
+    color:#666;
+}
+
+@media(max-width:600px) {
+    .contact-box {
+        padding:22px;
+    }
+
+    .contact-banner h1 {
+        font-size:29px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">🐾 寵物守護</a>
+<nav>
+<a href="index.html">首頁</a>
+<a href="medical.html">醫療照護</a>
+<a href="adoption.html">領養資訊</a>
+<a href="knowledge.html">寵物知識</a>
+<a href="products.html">寵物用品</a>
+<a href="about.html">關於我們</a>
+<a href="contact.html">聯絡我們</a>
+</nav>
+</header>
+
+<div class="contact-banner">
+<div>
+<h1>聯絡我們</h1>
+<p>歡迎提供建議，讓寵物守護持續進步。</p>
+</div>
+</div>
+
+<section class="contact-container">
+<div class="contact-box">
+
+<h2>意見回饋表單</h2>
+<p class="contact-intro">
+如果您有任何問題或建議，歡迎填寫以下表單。
+</p>
+
+<form class="contact-form"
+action="https://formspree.io/f/xzerbjdw"
+method="POST">
+
+<label for="name">姓名</label>
+<input type="text" id="name" name="name"
+placeholder="請輸入姓名" required>
+
+<label for="email">電子郵件</label>
+<input type="email" id="email" name="email"
+placeholder="請輸入電子郵件" required>
+
+<label for="subject">回饋類別</label>
+<select id="subject" name="subject" required>
+<option value="">請選擇回饋類別</option>
+<option value="醫療照護">醫療照護</option>
+<option value="領養資訊">領養資訊</option>
+<option value="寵物知識">寵物知識</option>
+<option value="寵物用品">寵物用品</option>
+<option value="網站問題">網站問題</option>
+<option value="其他建議">其他建議</option>
+</select>
+
+<label for="message">留言內容</label>
+<textarea id="message" name="message"
+placeholder="請輸入您的問題或建議..." required></textarea>
+
+<button type="submit">送出回饋</button>
+
+</form>
+
+<div class="contact-note">
+<strong>提醒：</strong>
+送出表單後，請留意畫面是否顯示提交成功。
+本表單需要先設定 Formspree 表單 ID 才能正常收件。
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>寵物守護 Pet Guardian</p>
+<p>用心照顧每一個毛孩，讓愛與陪伴不缺席。</p>
+<p>© 2026 Pet Guardian. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
