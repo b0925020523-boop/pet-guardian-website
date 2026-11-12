@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寵物用品｜寵物守護</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.products-banner {
+    background: linear-gradient(rgba(40,70,50,.55),rgba(40,70,50,.55)),
+    url("https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=1600")
+    center/cover;
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:30px;
+}
+
+.products-banner h1 {
+    font-size:40px;
+}
+
+.products-container {
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.products-container h2 {
+    color:#547C60;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.products-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.product-card {
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.product-card:hover {
+    transform:translateY(-5px);
+}
+
+.product-card img {
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.product-card div {
+    padding:20px;
+}
+
+.product-card h3 {
+    color:#547C60;
+    margin-bottom:10px;
+}
+
+.product-card p {
+    color:#666;
+    font-size:14px;
+}
+
+.product-tag {
+    display:inline-block;
+    background:#EAF2E9;
+    color:#547C60;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+.product-notice {
+    background:#F0F5EF;
+    padding:25px;
+    border-radius:12px;
+    line-height:1.8;
+}
+
+@media(max-width:768px) {
+    .products-grid {
+        grid-template-columns:1fr;
+    }
+
+    .products-banner h1 {
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">🐾 寵物守護</a>
+<nav>
+<a href="index.html">首頁</a>
+<a href="medical.html">醫療照護</a>
+<a href="adoption.html">領養資訊</a>
+<a href="knowledge.html">寵物知識</a>
+<a href="products.html">寵物用品</a>
+<a href="about.html">關於我們</a>
+<a href="contact.html">聯絡我們</a>
+</nav>
+</header>
+
+<div class="products-banner">
+<div>
+<h1>寵物用品 Pet Products</h1>
+<p>挑選合適的用品，打造舒適的寵物生活。</p>
+</div>
+</div>
+
+<!-- 貓咪用品 -->
+<section class="products-container">
+<h2>貓咪用品</h2>
+
+<div class="products-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700" alt="貓咪飼料">
+<div>
+<span class="product-tag">飲食用品</span>
+<h3>貓咪飼料</h3>
+<p>依照貓咪年齡、健康狀況及營養需求選擇適合的完整均衡飼料。</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=700" alt="貓咪貓砂盆">
+<div>
+<span class="product-tag">生活用品</span>
+<h3>貓砂與貓砂盆</h3>
+<p>準備合適的貓砂盆及貓砂，維持乾淨舒適的生活環境。</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=700" alt="貓咪玩具">
+<div>
+<span class="product-tag">娛樂用品</span>
+<h3>貓咪玩具</h3>
+<p>透過逗貓棒及互動玩具，增加活動量與生活樂趣。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 狗狗用品 -->
+<section class="products-container">
+<h2>狗狗用品</h2>
+
+<div class="products-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700" alt="狗狗飼料">
+<div>
+<span class="product-tag">飲食用品</span>
+<h3>狗狗飼料</h3>
+<p>依照狗狗的年齡、體型與活動量挑選適合的食物。</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1601758123927-196d1f7c5f1d?w=700" alt="狗狗牽繩">
+<div>
+<span class="product-tag">外出用品</span>
+<h3>牽繩與胸背帶</h3>
+<p>外出時使用合適的牽繩及胸背帶，提升活動安全性。</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=700" alt="狗狗玩具">
+<div>
+<span class="product-tag">娛樂用品</span>
+<h3>狗狗玩具</h3>
+<p>選擇適合體型及咀嚼習慣的玩具，增加互動樂趣。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 日常用品 -->
+<section class="products-container">
+<h2>日常照護用品</h2>
+
+<div class="products-grid">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700" alt="寵物美容">
+<div>
+<span class="product-tag">清潔用品</span>
+<h3>美容清潔用品</h3>
+<p>梳子、寵物專用清潔用品及日常毛髮照護工具。</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1601758123927-196d1f7c5f1d?w=700" alt="寵物外出用品">
+<div>
+<span class="product-tag">外出用品</span>
+<h3>寵物外出包</h3>
+<p>選擇通風、穩固且適合寵物體型的外出用品。</p>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700" alt="寵物生活">
+<div>
+<span class="product-tag">居家用品</span>
+<h3>寵物睡墊</h3>
+<p>準備舒適且方便清潔的休息空間，讓寵物安心休息。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="products-container">
+<h2>用品選購提醒</h2>
+
+<div class="product-notice">
+<p>01｜依照寵物的年齡、體型及需求挑選用品。</p>
+<p>02｜選購符合安全標準的寵物產品。</p>
+<p>03｜定期檢查用品是否損壞或需要更換。</p>
+<p>04｜避免讓寵物接觸容易誤食的小型零件。</p>
+<p>05｜食品及保健用品應留意成分與適用對象。</p>
+</div>
+</section>
+
+<footer>
+<p>寵物守護 Pet Guardian</p>
+<p>用心照顧每一個毛孩，讓愛與陪伴不缺席。</p>
+<p>© 2026 Pet Guardian. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
