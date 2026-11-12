@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>領養資訊｜寵物守護</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.adoption-banner {
+    background: linear-gradient(90deg,rgba(45,75,55,.7),rgba(45,75,55,.1)),
+    url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600") center/cover;
+    min-height:300px;
+    display:flex;
+    align-items:center;
+    padding:40px 9%;
+    color:white;
+}
+
+.adoption-banner h1 {
+    font-size:40px;
+}
+
+.adoption-section {
+    max-width:1100px;
+    margin:auto;
+    padding:45px 20px;
+}
+
+.adoption-section h2 {
+    color:#547C60;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.animal-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.animal-card {
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+.animal-card img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.animal-card div {
+    padding:20px;
+}
+
+.animal-card h3 {
+    color:#547C60;
+    margin-bottom:10px;
+}
+
+.info-card {
+    background:#F0F5EF;
+    padding:22px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.info-card h3 {
+    color:#547C60;
+    margin-bottom:8px;
+}
+
+.info-card a {
+    display:inline-block;
+    margin-top:10px;
+    color:#477B5B;
+    text-decoration:underline;
+}
+
+.quiz-box {
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+.quiz-box label {
+    display:block;
+    margin:15px 0;
+}
+
+.quiz-box button {
+    background:#6E9878;
+    color:white;
+    border:0;
+    border-radius:8px;
+    padding:12px 25px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#quizResult {
+    margin-top:20px;
+    color:#547C60;
+    font-weight:bold;
+}
+
+@media(max-width:768px) {
+    .animal-grid {
+        grid-template-columns:1fr;
+    }
+
+    .adoption-banner h1 {
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">🐾 寵物守護</a>
+<nav>
+<a href="index.html">首頁</a>
+<a href="medical.html">醫療照護</a>
+<a href="adoption.html">領養資訊</a>
+<a href="knowledge.html">寵物知識</a>
+<a href="products.html">寵物用品</a>
+<a href="about.html">關於我們</a>
+<a href="contact.html">聯絡我們</a>
+</nav>
+</header>
+
+<div class="adoption-banner">
+<div>
+<h1>給毛孩一個溫暖的家</h1>
+<p>領養代替購買，讓每個生命都有被愛的機會。</p>
+</div>
+</div>
+
+<section class="adoption-section">
+<h2>貓狗領養資訊</h2>
+
+<div class="animal-grid">
+
+<div class="animal-card">
+<img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800" alt="貓咪">
+<div>
+<h3>貓咪領養</h3>
+<p>領養前請了解貓咪的生活習慣、飲食需求及環境準備，給牠安全舒適的生活。</p>
+</div>
+</div>
+
+<div class="animal-card">
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800" alt="狗狗">
+<div>
+<h3>狗狗領養</h3>
+<p>領養狗狗前，應考量居住空間、活動時間及長期照顧責任。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="adoption-section">
+<h2>領養機構與資訊網站</h2>
+
+<div class="info-card">
+<h3>全國動物收容管理系統</h3>
+<p>查詢全台各地收容所的待領養犬貓資訊。</p>
+<a href="https://animal.moa.gov.tw/" target="_blank" rel="noopener noreferrer">前往官方網站</a>
+</div>
+
+<div class="info-card">
+<h3>臺北市動物之家</h3>
+<p>了解臺北市動物收容、認養及相關服務。</p>
+<a href="https://www.tcapo.gov.taipei/" target="_blank" rel="noopener noreferrer">前往臺北市動物保護處</a>
+</div>
+
+<div class="info-card">
+<h3>新北市動物保護防疫處</h3>
+<p>查詢新北市動物保護、收容及認養相關資訊。</p>
+<a href="https://www.ahiqo.ntpc.gov.tw/" target="_blank" rel="noopener noreferrer">前往官方網站</a>
+</div>
+</section>
+
+<section class="adoption-section">
+<h2>領養前注意事項</h2>
+
+<div class="info-card">
+<h3>01｜評估生活環境</h3>
+<p>確認居住空間是否適合飼養寵物。</p>
+</div>
+
+<div class="info-card">
+<h3>02｜確認經濟能力</h3>
+<p>考量日常飲食、醫療及生活用品等長期支出。</p>
+</div>
+
+<div class="info-card">
+<h3>03｜做好長期照顧準備</h3>
+<p>寵物需要陪伴、健康管理及穩定的生活環境。</p>
+</div>
+
+<div class="info-card">
+<h3>04｜全家共同討論</h3>
+<p>確認家庭成員都能接受並共同承擔照顧責任。</p>
+</div>
+</section>
+
+<section class="adoption-section">
+<h2>尋找最適合你的寵物</h2>
+
+<div class="quiz-box" id="quizBox">
+<div id="questionArea"></div>
+<button onclick="nextQuestion()">下一題</button>
+<p id="quizResult"></p>
+</div>
+</section>
+
+<footer>
+<p>寵物守護 Pet Guardian</p>
+<p>用心照顧每一個毛孩，讓愛與陪伴不缺席。</p>
+</footer>
+
+<script>
+const questions = [
+{
+q:"1. 你比較喜歡哪一種寵物？",
+a:["貓咪","狗狗","都可以"]
+},
+{
+q:"2. 你每天能花多少時間陪伴寵物？",
+a:["1小時以下","1～3小時","3小時以上"]
+},
+{
+q:"3. 你居住的環境是？",
+a:["小型套房","一般公寓","透天或較大空間"]
+},
+{
+q:"4. 你喜歡什麼樣的生活方式？",
+a:["安靜、自在","喜歡戶外活動","兩種都喜歡"]
+},
+{
+q:"5. 你是否有足夠的時間照顧寵物？",
+a:["平日比較忙碌","有固定時間","時間很充裕"]
+}
+];
+
+let current = 0;
+let answers = [];
+
+function showQuestion() {
+const area = document.getElementById("questionArea");
+
+area.innerHTML = `
+<h3>${questions[current].q}</h3>
+${questions[current].a.map((answer,index) => `
+<label>
+<input type="radio" name="answer" value="${index}">
+${answer}
+</label>
+`).join("")}
+`;
+
+document.querySelector("#quizBox button").textContent =
+current === questions.length - 1 ? "查看測驗結果" : "下一題";
+}
+
+function nextQuestion() {
+const selected = document.querySelector('input[name="answer"]:checked');
+
+if (!selected) {
+alert("請先選擇一個答案！");
+return;
+}
+
+answers[current] = Number(selected.value);
+
+if (current < questions.length - 1) {
+current++;
+showQuestion();
+} else {
+showResult();
+}
+}
+
+function showResult() {
+let cat = 0;
+let dog = 0;
+
+if (answers[0] === 0) cat += 3;
+if (answers[0] === 1) dog += 3;
+
+if (answers[1] === 0) cat += 2;
+if (answers[1] === 2) dog += 2;
+
+if (answers[2] === 0) cat += 2;
+if (answers[2] === 2) dog += 2;
+
+if (answers[3] === 0) cat += 2;
+if (answers[3] === 1) dog += 2;
+
+if (answers[4] === 0) cat += 1;
+if (answers[4] === 2) dog += 1;
+
+let result = cat > dog
+? "根據你的回答，可以優先了解貓咪的照顧需求！"
+: dog > cat
+? "根據你的回答，可以優先了解狗狗的照顧需求！"
+: "你可能同時適合了解貓咪和狗狗！";
+
+document.getElementById("questionArea").innerHTML =
+"<h3>測驗完成！</h3>";
+
+document.querySelector("#quizBox button").style.display = "none";
+
+document.getElementById("quizResult").textContent =
+result + " 實際領養前仍須評估時間、經濟及生活環境。";
+}
+
+showQuestion();
+</script>
+
+</body>
+</html>
